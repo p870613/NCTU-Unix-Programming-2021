@@ -3,7 +3,7 @@
 > In this homework, you have to implement the 'lsof' tool by yourself. 'lsof' is a tool to list open files. It can be used to list all the files opened by processes running in the system. The output of your homework is required to strictly follow the spec, the TAs will use the 'diff' tool to compare your output directly against our prepared sample sample testdata. Spaces and tabs are compressed into a single character when comparing the outputs.
 
 - A sample output from this homework is demonstrated as follows:
-    :::danger
+    ```
     $ ./hw1  -c bash
         bash
         COMMAND PID     USER      	FD     TYPE     NODE     NAME      
@@ -22,7 +22,8 @@
         bash    26884   terrynini38514	1u     CHR      3        /dev/pts/0
         bash    26884   terrynini38514	2u     CHR      3        /dev/pts/0
         bash    26884   terrynini38514	255u   CHR      3        /dev/pts/0
-    :::
+    ```
+    
 - Program Arguments
     - -c REGEX: a regular expression (REGEX) filter for filtering command line. For example -c sh would match bash, zsh, and share.
     - -t TYPE: a TYPE filter. Valid TYPE includes REG, CHR, DIR, FIFO, SOCK, and unknown. TYPEs other than the listed should be considered as invalid. For invalid types, your program have to print out an error message Invalid TYPE option. in a single line and terminate your program.
